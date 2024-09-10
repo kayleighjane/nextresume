@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 
 
 export default function Navbar() {
-    if (typeof window !== "undefined") {
     const useScreenSize = () => {
         const [screenSize, setScreenSize] = useState({
           width: 0,
@@ -30,7 +29,7 @@ export default function Navbar() {
       
         return screenSize;
       };
-      
+    if (typeof window !== "undefined") {
     const screenSize = useScreenSize();
     const mobile = screenSize.width <= 768;
     };
