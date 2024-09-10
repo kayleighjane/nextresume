@@ -1,0 +1,38 @@
+.footer {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    
+    &__container {
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+        max-width: 50rem;
+        width: 100%;
+        color: white;
+        font-size: 0.8rem;
+        font-weight: 300;
+        @media only screen and (min-width: $sm) {
+            font-size: 1rem;
+        }
+    }
+    &__text-left, &__text-middle, &__text-right {
+        width: 100%;
+        @media only screen and (min-width: $md) {
+            width: 50%;
+        }
+    }
+    &__text-middle {
+        @media only screen and (min-width: $sm) {
+        align-self: center;
+        text-align: center;
+        }
+    }
+    &__text-right {
+        @media only screen and (min-width: $sm) {
+        align-self: flex-end;
+        text-align: right;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.contact {
+    background-color: #ffffff;
+    padding: 2rem;
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    &__anchor {
+        display: block;
+        position: relative;
+        top: -100px;
+        visibility: hidden;
+    }
+    &__heading {
+        padding: 0;
+        margin: 0;
+        color: var(--primary-color);
+        border-bottom: 1px dashed var(--primary-color);
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        @media only screen and (min-width: $sm) {
+            font-size: 1.8rem;
+        }
+        @media only screen and (min-width: $md) {
+            font-size: 2rem;
+        }
+        @media only screen and (min-width: $lg) {
+            font-size: 2.2rem;
+        }
+    }
+    &__container {
+        width: 100%;
+        max-width: 50rem;
+        align-self: center;
+    }
+    &__para {
+        font-size: 1rem;
+        font-weight: 300;
+        a {
+            color: var(--primary-color);
+        }
+        @media only screen and (min-width: $sm) {
+            font-size: 1.2rem;
+        }
+        @media only screen and (min-width: $md) {
+            font-size: 1.4rem;
+        }
+    }
+}

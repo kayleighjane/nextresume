@@ -1,0 +1,70 @@
+@import '../stylesheets/variables.scss';
+
+.navbar {
+    position: fixed;
+    z-index: 1;
+   
+    box-sizing: border-box;
+    background-color: white;
+    width: calc(100% - 1rem);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: 1px dashed var(--primary-color);
+    height: 8.3rem;
+    transition: height 1s ease;
+    @media only screen and (min-width: 768px) {
+        height: 3.4rem;
+    }
+    &--closed {
+        display: flex;
+        justify-content: flex-end;
+        height: 2.5rem;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        
+        &--open {
+            flex-direction: column;
+            
+        }
+    }
+    &__item {
+        font-size: 1.2rem;
+        @media only screen and (min-width: $md) {
+            font-size: 1.4rem;
+        }
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+    }
+    &__button {
+        cursor: pointer;
+        border: 0;
+        background: none;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 600;
+
+        &--open {
+            position: absolute;
+            top: 0.4rem;
+            right: 0.2rem;
+        }
+    }
+    &__hidden {
+        visibility: collapse;
+    opacity: 0;
+    transition: opacity 1s, visibility 1s;
+    color: white;
+    }
+    &__show {
+        visibility: visible;
+    opacity: 1;
+    transition: opacity 1s, visibility 1s;
+    }
+}
