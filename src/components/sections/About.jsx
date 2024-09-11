@@ -1,6 +1,9 @@
 "use client"
 
+import { useEffect } from "react";
+
 export default function About() {
+  useEffect(() => {
   window.onload = (event) => {
     let callback = (entries, observer) => {
         entries.forEach((entry) => {
@@ -18,6 +21,7 @@ export default function About() {
           observer.observe(target);
       }
     }
+  })
 
     return (
         <section className="about">

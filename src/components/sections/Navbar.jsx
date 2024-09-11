@@ -1,38 +1,12 @@
 "use client"
 
 import React from "react"
-import { useState, useEffect } from "react";
-
+import { useState } from "react";
+import useScreenSize from "@/hooks/useScreenSize"
 
 export default function Navbar() {
-    const useScreenSize = () => {
-        const [screenSize, setScreenSize] = useState({
-          width: 0,
-          height: 0,
-        });
-      
-        useEffect(() => {
-          const handleResize = () => {
-            setScreenSize({
-              width: window.innerWidth,
-              height: window.innerHeight,
-            });
-          };
-      
-          window.addEventListener('resize', handleResize);
-      
-          // Clean up the event listener when the component unmounts
-          return () => {
-            window.removeEventListener('resize', handleResize);
-          };
-        }, []);
-      
-        return screenSize;
-      };
-    if (typeof window !== "undefined") {
     const screenSize = useScreenSize();
     const mobile = screenSize.width <= 768;
-    };
     const [isOpen, setIsOpen] = useState(false);
     const onClick = () => {
         setIsOpen(!isOpen);

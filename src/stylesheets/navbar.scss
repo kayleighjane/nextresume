@@ -3,7 +3,6 @@
 .navbar {
     position: fixed;
     z-index: 1;
-   
     box-sizing: border-box;
     background-color: white;
     width: calc(100% - 1rem);
@@ -59,7 +58,6 @@
     &__hidden {
         visibility: collapse;
     opacity: 0;
-    transition: opacity 1s, visibility 1s;
     color: white;
     }
     &__show {

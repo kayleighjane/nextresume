@@ -32,6 +32,8 @@
         width: 100%;
         max-width: 50rem;
         align-self: center;
+        display: flex;
+        align-items: center;
     }
     &__para {
         font-size: 1rem;
