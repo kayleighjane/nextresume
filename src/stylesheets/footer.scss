@@ -7,6 +7,7 @@
     &__container {
         display: flex;
         align-self: center;
+        align-items: center;
         justify-content: space-between;
         max-width: 50rem;
         width: 100%;
@@ -34,5 +35,8 @@
         align-self: flex-end;
         text-align: right;
         }
+    }
+    &__icons {
+        padding-top: 4px;
     }
 }
