@@ -32,13 +32,17 @@
         }
     }
     &__item {
-        font-size: 1.2rem;
-        @media only screen and (min-width: $md) {
-            font-size: 1.4rem;
-        }
         a {
             color: var(--primary-color);
             text-decoration: none;
+        }
+        a:hover {
+            font-weight: 800;
+            transition: font-weight 0.5s;
+        }
+        font-size: 1.2rem;
+        @media only screen and (min-width: $md) {
+            font-size: 1.4rem;
         }
     }
     &__button {
