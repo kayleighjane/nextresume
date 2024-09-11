@@ -1,5 +1,9 @@
 "use client"
 
+import { Bebas_Neue, Playwrite_Cuba } from "next/font/google";
+
+const bebasNeue = Bebas_Neue({ weight: ['400'], subsets: ["latin"] });
+
 export default function Intro() {
 
 
@@ -7,7 +11,7 @@ export default function Intro() {
         <section className="intro">
             <div className="intro__container">
             <h1 className="intro__heading">Hi! My name is Kayleigh. I'm a
-                <span className="intro__designer">
+                <span className={`${bebasNeue} intro__designer`}>
                     Designer
                 </span>
                 <span className="intro__developer">

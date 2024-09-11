@@ -29,8 +29,9 @@
     }
     &__designer {
         display: block;
-        font-family: 'Back to Black Demo';
         font-size: 4rem;
+        font-weight: 100;
+        line-height: 6rem;
         @media only screen and (min-width: $sm) {
             font-size: 5rem;
         }
@@ -40,7 +41,8 @@
     }
     &__developer {
         display: block;
-        font-family: 'Heavitas';
+        text-transform: uppercase;
+        font-weight: 800;
         font-size: 2.3rem;
         transform:rotate(180deg);
         transform: scale(-1, -1);
